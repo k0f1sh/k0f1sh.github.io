@@ -1,6 +1,6 @@
 base_url = "https://k0f1sh.github.io"
 title = "k0f1sh"
-description = "k0f1sh posts"
+description = "k0f1sh.github.io"
 default_language = "ja"
 compile_sass = false
 minify_html = true
