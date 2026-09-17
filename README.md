@@ -21,8 +21,6 @@ zola serve
 title = "記事のタイトル"
 description = "一覧に表示する短い説明"
 date = 2026-09-14
-[taxonomies]
-tags = ["Zola", "Rust"]
 +++
 ```
 
