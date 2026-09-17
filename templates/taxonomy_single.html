@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}{{ term.name }} — {{ config.title }}{% endblock title %}
+{% block content %}
+<header class="page-head shell">
+  <p class="eyebrow">Tag</p>
+  <h1>{{ term.name }}</h1>
+</header>
+<section class="shell listing">
+  <div class="post-list">
+    {% for page in term.pages %}{% include "partials/post-row.html" %}{% endfor %}
+  </div>
+</section>
+{% endblock content %}
+

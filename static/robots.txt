@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://k0f1sh.github.io/sitemap.xml
+

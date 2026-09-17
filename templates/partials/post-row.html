@@ -1,0 +1,9 @@
+<article class="post-row">
+  <time datetime="{{ page.date }}">{{ page.date | date(format="%Y.%m.%d") }}</time>
+  <div>
+    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </div>
+  <a class="row-arrow" href="{{ page.permalink }}" aria-label="{{ page.title }}を読む">↗</a>
+</article>
+

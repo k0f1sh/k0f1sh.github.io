@@ -1,0 +1,23 @@
+base_url = "https://k0f1sh.github.io"
+title = "k0f1sh"
+description = "ソフトウェアを作り、仕組みを探る技術ブログ"
+default_language = "ja"
+compile_sass = false
+minify_html = true
+build_search_index = false
+generate_feeds = true
+feed_filenames = ["atom.xml"]
+
+taxonomies = [
+  { name = "tags", feed = true },
+]
+
+[markdown]
+smart_punctuation = true
+
+[markdown.highlighting]
+theme = "github-dark"
+
+[extra]
+author = "k0f1sh"
+github = "https://github.com/k0f1sh"

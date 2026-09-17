@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+  <meta name="theme-color" content="#101513">
+  <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+  <link rel="stylesheet" href="{{ get_url(path='style.css', cachebust=true) }}">
+  <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path='atom.xml') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="{{ get_url(path='@/_index.md') }}" aria-label="ホーム">
+        <img class="avatar" src="{{ get_url(path='avatar.png') }}" alt="" width="30" height="30">
+        k0f1sh <span class="prompt" aria-hidden="true">~$</span><span class="cursor" aria-hidden="true"></span>
+      </a>
+      <nav aria-label="メインナビゲーション">
+        <a href="{{ config.extra.github }}" rel="me">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>{% block content %}{% endblock content %}</main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <a href="{{ get_url(path='atom.xml') }}">Atom feed</a>
+    </div>
+  </footer>
+</body>
+</html>

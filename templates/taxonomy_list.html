@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Tags — {{ config.title }}{% endblock title %}
+{% block content %}
+<header class="page-head shell">
+  <p class="eyebrow">Browse by topic</p>
+  <h1>Tags</h1>
+</header>
+<section class="shell listing">
+  <div class="tags tag-index">
+    {% for term in terms %}<a href="{{ term.permalink }}">{{ term.name }} <span>{{ term.pages | length }}</span></a>{% endfor %}
+  </div>
+</section>
+{% endblock content %}
+
