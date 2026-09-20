@@ -181,6 +181,7 @@ Examples:
 ## インストール
 
 インストールにはRustの開発環境（Cargo）が必要です。
+choは現在実験段階で、構文や動作が変わる可能性があります。
 
 ```console
 $ cargo install --git https://github.com/k0f1sh/cho.git
@@ -193,4 +194,3 @@ $ cargo install --git https://github.com/k0f1sh/cho.git
 choは、awkのように列を取り出し、S式で条件や加工を書くテキスト処理ツールです。日時・IPアドレス・URL・バイトサイズなども扱えます。集計やソートは既存コマンドに任せ、ワンライナーで手軽に書ける範囲に機能を絞っています。
 
 最初はawkっぽい自作Lispからスタートしましたが、awkとはまた違った便利なツールになったのではないかと思っています。
-
