@@ -181,7 +181,7 @@ Examples:
 ## インストール
 
 インストールにはRustの開発環境（Cargo）が必要です。
-choは現在実験段階で、構文や動作が変わる可能性があります。
+choはまだ試行錯誤中なので、構文や動作が変わる可能性があります。
 
 ```console
 $ cargo install --git https://github.com/k0f1sh/cho.git
