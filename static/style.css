@@ -60,9 +60,11 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .article-head h1 { margin: 40px 0 18px; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.25; letter-spacing: -.03em; }
 .article-description { max-width: 660px; color: var(--muted); font-size: 1.1rem; }
 .article-meta { display: flex; gap: 26px; margin-top: 25px; color: #77817b; font: 1rem ui-monospace, monospace; }
-.prose { padding-top: 42px; font-size: 1.02rem; }
+.prose { padding-top: 42px; font-size: 1.05rem; line-height: 1.8; }
 .prose h2 { margin: 2.2em 0 .7em; font-size: 1.65rem; letter-spacing: -.035em; }
 .prose h2::before { content: "# "; color: var(--accent); font-family: ui-monospace, monospace; }
+.prose h3 { margin: 1.8em 0 .6em; font-size: 1.25rem; letter-spacing: -.02em; }
+.prose h3::before { content: "## "; color: var(--accent); font-family: ui-monospace, monospace; opacity: 0.8; }
 .prose p, .prose ul, .prose ol { color: #c8cfc9; }
 .prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .prose code { padding: .15em .35em; background: var(--panel); color: #ccec9a; font: .9em ui-monospace, monospace; }
