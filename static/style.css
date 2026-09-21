@@ -15,7 +15,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: Inter, "Noto Sans JP", "Hiragino Kaku Gothic ProN", system-ui, sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
@@ -46,9 +46,9 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .post-list { border-top: 1px solid var(--line); }
 .post-row { display: grid; grid-template-columns: 120px 1fr auto; gap: 30px; align-items: start; padding: 28px 4px; border-bottom: 1px solid var(--line); }
 .post-row time { color: #77817b; font: .75rem ui-monospace, monospace; padding-top: 5px; }
-.post-row h3 { margin: 0; font-size: 1rem; letter-spacing: -.01em; }
+.post-row h3 { margin: 0; font-size: 1.05rem; letter-spacing: -.01em; }
 .post-row h3 a:hover { color: var(--accent); }
-.post-row p { margin: 5px 0 0; color: var(--muted); font-size: .92rem; }
+.post-row p { margin: 5px 0 0; color: var(--muted); font-size: .95rem; }
 .row-arrow { color: #6f7973; font-size: 1.2rem; }
 .post-row:hover .row-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
@@ -60,7 +60,7 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .article-head h1 { margin: 40px 0 18px; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.25; letter-spacing: -.03em; }
 .article-description { max-width: 660px; color: var(--muted); font-size: 1.1rem; }
 .article-meta { display: flex; gap: 26px; margin-top: 25px; color: #77817b; font: 1rem ui-monospace, monospace; }
-.prose { padding-top: 42px; font-size: 1.05rem; line-height: 1.8; }
+.prose { padding-top: 42px; font-size: 1.075rem; line-height: 1.8; }
 .prose h2 { margin: 2.2em 0 .7em; font-size: 1.65rem; letter-spacing: -.035em; }
 .prose h2::before { content: "# "; color: var(--accent); font-family: ui-monospace, monospace; }
 .prose h3 { margin: 1.8em 0 .6em; font-size: 1.25rem; letter-spacing: -.02em; }
