@@ -1,6 +1,6 @@
 base_url = "https://k0f1sh.github.io"
 title = "k0f1sh"
-description = "k0f1sh.github.io"
+description = "k0f1shの技術ブログ。自作ツールや日々の知見を記録しています。"
 default_language = "ja"
 compile_sass = false
 minify_html = true
