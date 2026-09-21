@@ -4,12 +4,11 @@
 {% set posts = get_section(path="posts/_index.md") %}
 <section class="shell home-section">
   <div class="section-heading">
-    <h2>最新の記事</h2>
-    <a class="text-link" href="{{ get_url(path='@/posts/_index.md') }}">すべての記事 <span>→</span></a>
+    <h2>TECH NOTES</h2>
   </div>
   <div class="post-list">
     {% for page in posts.pages %}
-      {% if loop.index <= 3 %}{% include "partials/post-row.html" %}{% endif %}
+      {% include "partials/post-row.html" %}
     {% else %}
       <p class="empty">最初の記事を準備中です。</p>
     {% endfor %}
