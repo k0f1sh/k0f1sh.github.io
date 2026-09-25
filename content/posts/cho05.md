@@ -22,7 +22,7 @@ alice DEVELOPER
 
 1. Bashの入力中にショートカットを入力し、入力中のコマンドをEmacsで開く
 2. `cho-mode` で編集し、`C-c C-c` で保存してEmacsを終了する
-3. 保存した内容をBashの入力行に戻す
+3. 保存した内容をBashに戻す
 4. 内容を確認し、Enterで実行する
 
 
@@ -74,7 +74,7 @@ bind -x '"\C-x\C-l":__cho_edit_readline_line'
 (define-key cho-mode-map (kbd "C-c C-k") #'cho-edit-cancel)
 ```
 
-`C-c C-c` で保存して正常終了すると、編集結果がBashの入力行に戻ります。`C-c C-k` で破棄して終了した場合は元の入力行を保ちます。戻った内容を確認してからEnterで実行できます。
+`C-c C-c` で保存して正常終了すると、編集結果がBashの入力に戻ります。`C-c C-k` で破棄して終了した場合は元の入力を保ちます。戻った内容を確認してからEnterで実行できます。
 
 
 ### cho-modeの中身
