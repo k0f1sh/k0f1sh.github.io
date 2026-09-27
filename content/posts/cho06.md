@@ -46,14 +46,14 @@ choでは、式の中で列番号を指定する `$1`、CSVのヘッダー名を
 
 ## ヘッダー名は最初に列番号へ解決する
 
-choは先にプログラムを読み取って評価用の式に組み立て、それから入力を1レコードずつ処理します。式を組み立てる時点ではCSVのヘッダーをまだ読んでいないため、`%email` を直接「4列目」にはできません。そこで、式に現れたヘッダー名を `Program.header_fields` に集め、式にはその配列の添字を `Expr::HeaderField(0)` のように持たせます。この `0` はCSVの列番号ではありません。
+choは最初にプログラムをパースして評価用のASTに変換してから、入力を1レコードずつ処理します。ASTに変換する時点ではCSVのヘッダーをまだ読んでいないため、`%email` を直接「4列目」にはできません。そこで、式に現れたヘッダー名を `Program.header_fields` に集め、ASTの式にはその配列の添字を `Expr::HeaderField(0)` のように持たせます。
 
 入力の処理を始めると、最初のCSVレコードをヘッダーとして読みます。このレコードはデータ行として評価せず、参照した名前が何列目かを調べるために使います。名前と同じ順序で列番号を `header_field_indices: Vec<usize>` に保存してから、次のレコード以降を処理します。データ行では、式が持つ添字から列番号を引いてフィールドを読むだけです。
 
 <figure class="header-resolve">
   <div class="header-resolve-step">
-    <div class="header-resolve-heading"><span class="header-resolve-number">1</span><strong>式を組み立てる</strong><span class="header-resolve-timing">ヘッダーを読む前</span><a class="header-resolve-source" href="https://github.com/k0f1sh/cho/blob/32de98f7f3b65327b0078869260209d1ed1581e6/src/compiler.rs#L128-L138">compiler.rs ↗</a></div>
-    <div class="header-resolve-flow"><span class="header-resolve-node"><code>%email</code><span class="header-resolve-detail">式では <code>Expr::HeaderField(0)</code></span></span><span class="header-resolve-arrow" aria-hidden="true">→</span><span class="header-resolve-node"><code>Program.header_fields: Vec&lt;String&gt;</code><span class="header-resolve-detail"><code>["email", "created_at"]</code></span></span></div>
+    <div class="header-resolve-heading"><span class="header-resolve-number">1</span><strong>パースしてASTに変換する</strong><span class="header-resolve-timing">ヘッダーを読む前</span><a class="header-resolve-source" href="https://github.com/k0f1sh/cho/blob/32de98f7f3b65327b0078869260209d1ed1581e6/src/compiler.rs#L128-L138">compiler.rs ↗</a></div>
+    <div class="header-resolve-flow"><span class="header-resolve-node"><code>%email</code><span class="header-resolve-detail">ASTでは <code>Expr::HeaderField(0)</code></span></span><span class="header-resolve-arrow" aria-hidden="true">→</span><span class="header-resolve-node"><code>Program.header_fields: Vec&lt;String&gt;</code><span class="header-resolve-detail"><code>["email", "created_at"]</code></span></span></div>
   </div>
   <div class="header-resolve-step">
     <div class="header-resolve-heading"><span class="header-resolve-number">2</span><strong>先頭レコードで列番号を決める</strong><span class="header-resolve-timing">一度だけ</span><a class="header-resolve-source" href="https://github.com/k0f1sh/cho/blob/32de98f7f3b65327b0078869260209d1ed1581e6/src/runtime/runner.rs#L135-L158">runner.rs ↗</a></div>
