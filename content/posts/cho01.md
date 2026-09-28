@@ -4,6 +4,8 @@ description = "awkのように列を扱い、日時やIPアドレスも比較・
 date = 2026-09-20
 [taxonomies]
 tags = ["cho"]
+[extra]
+related = ["posts/cho02.md", "posts/cho04.md"]
 +++
 
 [`cho`](https://github.com/k0f1sh/cho) というコマンドラインツールを作っています。

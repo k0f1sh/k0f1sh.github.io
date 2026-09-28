@@ -4,6 +4,8 @@ description = "S式で書けるテキスト処理ツールchoを、-Cオプシ�
 date = 2026-09-23
 [taxonomies]
 tags = ["cho"]
+[extra]
+related = ["posts/cho01.md", "posts/cho05.md"]
 +++
 
 [choの紹介記事](../cho01/)でも触れましたが、choはLisp風にawkが書けたらいいなという動機で作り始めました。

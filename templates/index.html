@@ -3,8 +3,13 @@
 {% block content %}
 {% set posts = get_section(path="posts/_index.md") %}
 <section class="shell home-section">
+  <header class="home-intro">
+    <p class="eyebrow">TECH NOTES</p>
+    <h1>k0f1sh</h1>
+    <p>自作ツールや技術のメモを書いています。</p>
+  </header>
   <div class="section-heading">
-    <h2>TECH NOTES</h2>
+    <h2>記事</h2>
   </div>
   <div class="post-list">
     {% for page in posts.pages %}

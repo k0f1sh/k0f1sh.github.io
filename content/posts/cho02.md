@@ -4,6 +4,8 @@ description = "リストも変数代入も持たないchoで、分割した文�
 date = 2026-09-21
 [taxonomies]
 tags = ["cho"]
+[extra]
+related = ["posts/cho01.md", "posts/cho03.md"]
 +++
 
 前回は、awkのように列を取り出してS式で加工できる[テキスト処理ツールcho](../cho01/)を紹介しました。今回は、choを作る中で悩んだ「文字列の分割」について書きます。

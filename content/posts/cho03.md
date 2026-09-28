@@ -4,6 +4,8 @@ description = "choのフィールド範囲記法（$3..）を、列の再結合�
 date = 2026-09-22
 [taxonomies]
 tags = ["cho"]
+[extra]
+related = ["posts/cho01.md", "posts/cho06.md"]
 +++
 
 前回は、リストを持たないchoで文字列を分割するために作った特殊形式 [`s/with`](../cho02/) について書きました。今回は、`$3..` のように「あるフィールドから後ろをまとめて取り出す」記法について書きます。

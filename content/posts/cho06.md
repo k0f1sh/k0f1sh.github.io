@@ -4,6 +4,8 @@ description = "CSVの列を名前で選ぶ%nameの記法と、ヘッダーを列
 date = 2026-09-26
 [taxonomies]
 tags = ["cho"]
+[extra]
+related = ["posts/cho01.md", "posts/cho03.md"]
 +++
 
 [cho](../cho01/) は、Lisp風の式で入力行を加工するコマンドラインツールです。通常は空白で区切られた行を列に分けて扱いますが、`--csv` を付けるとCSVも読み込めます。この記事では、CSVのヘッダー名で列を指定する方法と、その実装を紹介します。

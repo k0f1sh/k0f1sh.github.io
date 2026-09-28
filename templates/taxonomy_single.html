@@ -10,6 +10,7 @@
 </header>
 
 <section class="shell listing">
+  {% set row_heading_level = 2 %}
   <div class="post-list">
     {% for page in term.pages %}{% include "partials/post-row.html" %}{% endfor %}
   </div>

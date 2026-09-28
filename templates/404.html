@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}ページが見つかりません — {{ config.title }}{% endblock title %}
+{% block description %}お探しのページは見つかりませんでした。{% endblock description %}
+
+{% block content %}
+<section class="shell error-page">
+  <p class="eyebrow">404</p>
+  <h1>ページが見つかりません</h1>
+  <p>URLを確認するか、トップページから記事を探してください。</p>
+  <a class="back-link" href="{{ get_url(path='@/_index.md') }}">← トップページへ戻る</a>
+</section>
+{% endblock content %}

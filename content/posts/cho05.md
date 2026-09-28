@@ -4,6 +4,8 @@ description = "choをシェル上で楽に書くためにcho-mode.elを作った
 date = 2026-09-25
 [taxonomies]
 tags = ["cho", "Emacs"]
+[extra]
+related = ["posts/cho01.md", "posts/cho04.md"]
 +++
 
 [cho](../cho01/) は、Lisp風の構文でawkのような行指向のテキスト処理を行うコマンドラインツールです。

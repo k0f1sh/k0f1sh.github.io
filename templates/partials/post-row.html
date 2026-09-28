@@ -1,7 +1,11 @@
 <article class="post-row">
   <time datetime="{{ page.date }}">{{ page.date | date(format="%Y.%m.%d") }}</time>
   <div>
-    <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+    {% if row_heading_level is defined and row_heading_level == 2 %}
+      <h2><a href="{{ page.permalink }}">{{ page.title }}</a></h2>
+    {% else %}
+      <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+    {% endif %}
     {% if page.description %}<p>{{ page.description }}</p>{% endif %}
     {% if page.taxonomies.tags %}
       <div class="tag-list" aria-label="タグ">
@@ -9,5 +13,5 @@
       </div>
     {% endif %}
   </div>
-  <a class="row-arrow" href="{{ page.permalink }}" aria-label="{{ page.title }}を読む">↗</a>
+  <span class="row-arrow" aria-hidden="true">↗</span>
 </article>
