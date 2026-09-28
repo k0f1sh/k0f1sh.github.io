@@ -19,6 +19,14 @@
     {% set share_title = section.title %}
     {% set share_description = section.description | default(value=config.description) %}
     {% set share_type = "website" %}
+  {% elif term %}
+    {% set share_title = term.name ~ " の記事" %}
+    {% set share_description = term.name ~ " タグの記事一覧" %}
+    {% set share_type = "website" %}
+  {% elif taxonomy %}
+    {% set share_title = "タグ一覧" %}
+    {% set share_description = "記事のタグ一覧" %}
+    {% set share_type = "website" %}
   {% else %}
     {% set share_title = config.title %}
     {% set share_description = config.description %}
@@ -55,6 +63,7 @@
         k0f1sh <span class="prompt" aria-hidden="true">~$</span><span class="cursor" aria-hidden="true"></span>
       </a>
       <nav aria-label="メインナビゲーション">
+        <a href="{{ get_url(path='tags') }}/">Tags</a>
         <a href="{{ config.extra.github }}" rel="me">GitHub</a>
       </nav>
     </div>

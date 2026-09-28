@@ -3,7 +3,11 @@
   <div>
     <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
     {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+    {% if page.taxonomies.tags %}
+      <div class="tag-list" aria-label="タグ">
+        {% for tag in page.taxonomies.tags %}<a class="tag" href="{{ get_taxonomy_url(kind='tags', term=tag) }}">#{{ tag }}</a>{% endfor %}
+      </div>
+    {% endif %}
   </div>
   <a class="row-arrow" href="{{ page.permalink }}" aria-label="{{ page.title }}を読む">↗</a>
 </article>
-

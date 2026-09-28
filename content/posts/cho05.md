@@ -2,6 +2,8 @@
 title = "自作のミニ言語用Emacsモードを作り、シェルから呼び出す"
 description = "choをシェル上で楽に書くためにcho-mode.elを作った話"
 date = 2026-09-25
+[taxonomies]
+tags = ["cho", "Emacs"]
 +++
 
 [cho](../cho01/) は、Lisp風の構文でawkのような行指向のテキスト処理を行うコマンドラインツールです。

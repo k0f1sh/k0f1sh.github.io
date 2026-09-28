@@ -21,7 +21,12 @@ zola serve
 title = "記事のタイトル"
 description = "一覧に表示する短い説明"
 date = 2026-09-14
+
+[taxonomies]
+tags = ["cho"]
 +++
 ```
+
+`tags` に複数の名前を指定できます。タグ一覧は `/tags/`、各タグの記事一覧は `/tags/タグ名/` に生成されます。タグが不要な記事では `[taxonomies]` 以下を省略できます。
 
 `main` ブランチへの push 後は GitHub Actions がビルドし、GitHub Pages へ公開します。

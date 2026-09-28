@@ -2,6 +2,8 @@
 title = "Lispが苦手な人のためのcho"
 description = "S式で書けるテキスト処理ツールchoを、-Cオプションとパイプでかっこを書かずに使う話"
 date = 2026-09-23
+[taxonomies]
+tags = ["cho"]
 +++
 
 [choの紹介記事](../cho01/)でも触れましたが、choはLisp風にawkが書けたらいいなという動機で作り始めました。

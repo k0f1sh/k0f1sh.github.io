@@ -2,6 +2,8 @@
 title = "awkをLispで書きたかったのでテキスト処理ツール『cho』を作った"
 description = "awkのように列を扱い、日時やIPアドレスも比較・加工できる、S式のテキスト処理ツールの紹介"
 date = 2026-09-20
+[taxonomies]
+tags = ["cho"]
 +++
 
 [`cho`](https://github.com/k0f1sh/cho) というコマンドラインツールを作っています。

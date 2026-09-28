@@ -49,17 +49,26 @@ nav a:hover, nav a:focus-visible { color: var(--accent); }
 .post-row h3 { margin: 0; font-size: 1.05rem; letter-spacing: -.01em; }
 .post-row h3 a:hover { color: var(--accent); }
 .post-row p { margin: 5px 0 0; color: var(--muted); font-size: .95rem; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 12px; }
+.tag { color: var(--accent); font: 500 .78rem ui-monospace, monospace; }
+.tag:hover, .tag:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
 .row-arrow { color: #6f7973; font-size: 1.2rem; }
 .post-row:hover .row-arrow { color: var(--accent); transform: translate(2px, -2px); }
 
 .page-head { padding-block: 90px 64px; border-bottom: 1px solid var(--line); }
 .page-head > p:last-child { max-width: 580px; margin: 28px 0 0; color: var(--muted); font-size: 1.05rem; }
 .listing { padding-block: 56px 120px; }
+.taxonomy-list { border-top: 1px solid var(--line); }
+.taxonomy-item { display: flex; justify-content: space-between; gap: 20px; padding: 22px 4px; border-bottom: 1px solid var(--line); }
+.taxonomy-item span:first-child { color: var(--accent); }
+.taxonomy-item span:last-child { color: var(--muted); font: .78rem ui-monospace, monospace; }
+.taxonomy-item:hover span { color: var(--ink); }
 .article { max-width: 800px; padding-block: 72px 120px; }
 .article-head { padding-bottom: 48px; border-bottom: 1px solid var(--line); }
 .article-head h1 { margin: 40px 0 18px; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.25; letter-spacing: -.03em; }
 .article-description { max-width: 660px; color: var(--muted); font-size: 1.1rem; }
-.article-meta { display: flex; gap: 26px; margin-top: 25px; color: #77817b; font: 1rem ui-monospace, monospace; }
+.article-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; margin-top: 25px; color: #77817b; font: 1rem ui-monospace, monospace; }
+.article-meta .tag-list { margin-top: 0; }
 .prose { padding-top: 42px; font-size: 1.075rem; line-height: 1.8; }
 .prose h2 { margin: 2.2em 0 .7em; font-size: 1.65rem; letter-spacing: -.035em; }
 .prose h2::before { content: "# "; color: var(--accent); font-family: ui-monospace, monospace; }
