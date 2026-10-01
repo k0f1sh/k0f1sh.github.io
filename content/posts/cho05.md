@@ -20,7 +20,7 @@ alice DEVELOPER
 私が普段EmacsでLispを書くときは、Paredit、rainbow-delimiters、ElDocを使っています。
 
 シェル上で入力する場合はそれらの拡張の支援がないので、コードが少し複雑になると辛いなと思うことがあります。
-そこで、シェル上でEmacsをすぐに開いて編集できる仕組みを整えることにしました。そのために、choの式を含むシェルコマンド用のEmacsメジャーモード[`cho-mode`](https://github.com/k0f1sh/cho/tree/main/editors/emacs)も作り、 `.bashrc` に設定を追加しました。
+そこで、choの式を含むシェルコマンド用のEmacsメジャーモード[`cho-mode`](https://github.com/k0f1sh/cho/tree/main/editors/emacs)を作り、入力中のコマンドをEmacsで開けるように`.bashrc`に設定を追加しました。
 
 ![シェル上でEmacsを起動しcho-modeで編集する様子](/cho-mode.gif)
 
@@ -78,18 +78,18 @@ bind -x '"\C-x\C-l":__cho_edit_readline_line'
 (define-key cho-mode-map (kbd "C-c C-k") #'cho-edit-cancel)
 ```
 
-`C-c C-c` で保存して正常終了すると、編集結果がBashの入力に戻ります。`C-c C-k` で破棄して終了した場合は元の入力を保ちます。戻った内容を確認してからEnterで実行できます。
+`C-c C-k`で編集をキャンセルすると、Bashには元の入力が残ります。
 
 
 ### cho-modeの中身
 
 `cho-mode` はEmacsの `sh-mode` を継承しています。編集するのはchoの式だけではなく、`echo` やパイプを含むシェルコマンド全体だからです。その中から `cho '(p $1)'` のように、シングルクォートで囲まれ、`(` で始まるchoの式を見つけます。
 
-(現在は通常の一行コマンドを主な対象としており、コマンド置換やヒアドキュメントなどの複雑なシェル構文は完全には解析していません。)
+現在は通常の1行コマンドを主な対象にしています。コマンド置換やヒアドキュメントなど、複雑なシェル構文は完全には解析していません。
 
 choの式では、関数名、`$1` などのフィールド参照、`NR`・`NF`、真偽値、正規表現に色が付きます。
 
-通常、`sh-mode` ではシングルクォートの中身が文字列として扱われ、その中のかっこをS式の構造として認識できません。そこで、choの式を囲むクォートについて、[Emacsが構文を認識するための属性を変更しています](https://github.com/k0f1sh/cho/blob/d165b51cfaa457e1a1d53c21cff77be1738720f1/editors/emacs/cho-mode.el#L92-L103)。コマンドに書かれたクォート自体は残したまま、中のかっこをS式として扱えるようにすることで、Pareditによる編集やrainbow-delimitersによる色分けができるようになりました。
+通常、`sh-mode` ではシングルクォートの中身が文字列として扱われ、その中のかっこをS式の構造として認識できません。そこで、choの式を囲むクォートについて、[Emacsが構文を認識するための属性を変更しています](https://github.com/k0f1sh/cho/blob/d165b51cfaa457e1a1d53c21cff77be1738720f1/editors/emacs/cho-mode.el#L92-L103)。コマンドに書かれたクォート自体は残し、中のかっこをS式として認識させています。これでPareditによる編集やrainbow-delimitersによる色分けが使えます。
 
 また、式の先頭で関数名を入力してTabを押すと、補完候補が出ます。ElDocでは、編集中の関数の引数や戻り値の型を確認できます。例えば、冒頭の `s/after` を書くときも、引数の順番を確認しながら入力できます。
 
