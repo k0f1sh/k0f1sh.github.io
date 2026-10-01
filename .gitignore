@@ -6,6 +6,9 @@
 /.agents/
 /.codex/
 
+# Local drafts and ideas
+/memo/
+
 # Editors
 /.idea/
 /.vscode/
