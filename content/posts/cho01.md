@@ -134,7 +134,7 @@ $ echo 'not-a-url' | cho '(p (url/path $1))'
 cho: record 1: url/path: argument 1 expects Url (absolute URL), but "not-a-url" is not a valid absolute URL
 ```
 
-この場合、終了コードは `1` になります。エラー時に代わりの値を使って処理を続けたいなら、`default` で明示できます。
+この場合、終了コードは `1` になります。エラー時に代わりの値を使って処理を続けたいなら、`default` で指定します。
 
 ```console
 $ echo 'not-a-url' | cho '(p (default (url/path $1) "INVALID_URL"))'

@@ -10,7 +10,7 @@ related = ["posts/cho01.md", "posts/cho04.md"]
 
 [cho](../cho01/) は、Lisp風の構文でawkのような行指向のテキスト処理を行うコマンドラインツールです。
 
-例えば、名前と `role=developer` の2列を受け取り、職種を取り出して大文字にする処理は、`cho`では次のように書けます。
+例えば、名前と `role=developer` の2列を受け取り、職種を取り出し、`s/upper` で大文字にします。
 
 ```console
 $ echo 'alice role=developer' | cho '(p $1 (s/upper (s/after $2 "=")))'
