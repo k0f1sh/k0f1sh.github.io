@@ -22,14 +22,14 @@ choでは、関数の呼び出しを `(関数名 引数...)` という形で書�
 
 ## -Cで関数を直接呼び出す
 
-たとえば、2列目を大文字にするなら、通常のchoではこう書きます。
+たとえば、通常のchoで2列目を大文字にするには、`s/upper` に `$2` を渡します。
 
 ```console
 $ echo 'alice developer' | cho '(s/upper $2)'
 DEVELOPER
 ```
 
-同じ処理を、`-C` オプションをつけると、かっこなしでこう書けます。
+`-C` オプションをつければ、同じ処理をかっこなしで書けます。
 
 ```console
 $ echo 'alice developer' | cho -C s/upper @2
